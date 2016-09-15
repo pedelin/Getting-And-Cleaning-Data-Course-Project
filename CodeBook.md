@@ -11,8 +11,8 @@ Here are the data for the project: https://d396qusza40orc.cloudfront.net/getdata
 ## Code description and variables
 The description of the code and the defined variables are presented below for every step in the project description
 
-1. Downloding and unzipping data set (if not already in working directory and then reading relevant files to R, ref. see "Sources" below.
-  * Reading the files to `x_train`, `y_train`, `x_test`, `y_test`, `subject_train` and `subject_test`. 
+1. Downloding and unzipping data set (if not already in working directory) and then reading relevant files to R, ref. see "Sources" below.
+  * Reading the files to the variables: `x_train`, `y_train`, `x_test`, `y_test`, `subject_train` and `subject_test`. Including variables `SubjectID` and `ActivityID` to dataset.
 2. Merges the training and the test sets to create one data set. 
   * Merging the test and training data by column separetly and the binding them by rows to create one data set, variable name: `Total`
 3. Extracts only the measurements on the mean and standard deviation for each measurement.
