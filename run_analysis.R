@@ -4,7 +4,7 @@ fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%2
 # File name
 filename <- "getdata_projectfiles.zip"
 # Download and unzip file if not in wd
-if(!file.exists(filename)){
+if(!file.exists("UCI HAR Dataset")){
         download.file(fileUrl,filename)
         unzip(filename)
         # Removing zip-file
@@ -65,6 +65,6 @@ colnames(Activity_MeanSTD)<-columns_tmp
 
 FinalTidy <- aggregate(. ~ Activity+SubjectID, Activity_MeanSTD,mean)
 
-write.table(FinalTidy,file="FinalTidy.txt")
+write.table(FinalTidy,file="FinalTidy.txt",row.name=FALSE)
 
 
